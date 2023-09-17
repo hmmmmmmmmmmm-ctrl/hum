@@ -1,8 +1,4 @@
-from termcolor import cprint, colored
-import time
-import random
-import socket
-import requests
+
 
 random_time = random.randint(5, 17)
 
