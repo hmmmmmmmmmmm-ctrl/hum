@@ -25,6 +25,6 @@ response = requests.get(url)
 if response.status_code == 200:
     content = response.text
     lignes = content.split('\n')
-    cprint(f"[ TOKEN ] {random.choice(lignes)}", "green")
+    cprint(f"\n[ TOKEN ] {random.choice(lignes)}", "green")
 else:
     cprint(f"ERROR, try to relaunch or verify your connexion", color="red")
