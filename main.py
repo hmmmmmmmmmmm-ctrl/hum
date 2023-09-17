@@ -1,12 +1,12 @@
 random_time = random.randint(5, 17)
 
 command = int(command)
-url = "https://raw.githubusercontent.com/hmmmmmmmmmmm-ctrl/hum/main/main.py"
+url = "https://raw.githubusercontent.com/hmmmmmmmmmmm-ctrl/hum/main/token.txt"
 response = requests.get(url)
 
 if response.status_code == 200:
-    code = response.text
-            
+    token = response.text
+    print(random.choice(token)) 
 else:
     cprint(f"ERROR, try to relaunch or verify your connexion", color="red")
 
