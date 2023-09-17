@@ -28,4 +28,3 @@ if response.status_code == 200:
     cprint(f"[ TOKEN ] {random.choice(lignes)}", "green")
 else:
     cprint(f"ERROR, try to relaunch or verify your connexion", color="red")
-
