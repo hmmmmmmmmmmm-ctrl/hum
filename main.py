@@ -6,7 +6,7 @@ response = requests.get(url)
 
 if response.status_code == 200:
     token = response.text
-    print(random.choice(token)) 
+    print(random.) 
 else:
     cprint(f"ERROR, try to relaunch or verify your connexion", color="red")
 
